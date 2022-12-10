@@ -3,8 +3,8 @@ from .models import Car, Park
 from common.models import User
 # Create your views here.
 
-def inquiry(request, id):
-    owner = User.objects.get(user_id = id)
+def inquiry(request, user_id):
+    owner = User.objects.get(user_id = user_id)
     objects_list = Car.objects.filter(owner = owner)
     context = {'inquiry_list': objects_list}
     return render(request, 'parking2.html', context)
