@@ -184,6 +184,15 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% if board_list %}
+                                            {% for board in board_list %}
+                                                <tr>
+                                                    <td>{{ inquiry_list.num}}</td>
+                                                    <td>{{ inquiry_list.entry_time }}</td>
+                                                    <td>{{ inquiry_list.exit_time }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% else %}
                                        <tr>
                                             <td>123가1234</td>
                                             <td>22-12-04 08:21</td>

@@ -3,7 +3,6 @@ from common.models import User, UserProfile
 
 # Create your models here.
 
-class Parking(models.Model):
 
 class Car(models.Model):
     CAR_TYPES = [
@@ -22,7 +21,8 @@ class Car(models.Model):
     reg_date = models.DateTimeField(auto_now=True)
     approve = models.BooleanField(default=False)
     car_type = models.CharField(choices=CAR_TYPES, max_length=10)
-    blacklist = models.BooleanField(default=False)
+    entry_time = models.DateTimeField(auto_now=True)
+    exit_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['reg_date']
