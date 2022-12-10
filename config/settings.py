@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'park.apps.ParkConfig',
     'common.apps.CommonConfig',
     'board.apps.BoardConfig',
     'aptcomplex.apps.AptcomplexConfig',

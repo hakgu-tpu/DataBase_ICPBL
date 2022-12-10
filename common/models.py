@@ -40,7 +40,9 @@ class User(models.Model):
         (1501, '1501호'), (1502, '1502호'), (1503, '1503호'), (1504, '1504호'), (1505, '1505호'), (1506, '1506호'),
         (1507, '1507호'),
     )
-    #user_house_num = models.IntegerField(max_length=6, choices=HOUSE_NUM_CHOICES, default="")
+
+    user_building_num = models.IntegerField(max_length=6, choices=BUILDING_NUM_CHOICES, default="")
+    user_house_num = models.IntegerField(max_length=6, choices=HOUSE_NUM_CHOICES, default="")
 
 
     user_id = models.CharField(max_length=32, unique = True, verbose_name = '아이디')
